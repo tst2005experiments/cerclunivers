@@ -1,0 +1,175 @@
+
+log irc du 20140612 duree 44min
+<TsT> cest tjr mon jeu avec mon cercl'univers
+<TsT> jme suis dis
+<TsT> que jai decider qu'il y aurait 3 types de vaisseaux
+<TsT> les petits, les moyens et les gros
+<TsT> avec un facteur de taille de 10 entre eux
+<TsT> genre 1 gros = 10 moyen = 100 petit
+<TsT> class1 = petit
+<TsT> class2 = moyen
+<TsT> class3 = gros
+<TsT> et finalement jai decidé qu'il y aurait un class4
+<TsT> parce que jaime bien le 1000
+<TsT> et du coup le numero correspond au numbre de 0
+<TsT> ou 10^n
+<TsT> enfin
+<TsT> euhh non
+<TsT> 10^(n-1)
+<TsT> bref
+<TsT> jdis parce que le plus gros des problemes cest d'arriver
+<TsT> a gerer ca avec des calculs ou de math ;p
+<TsT> donc je continue
+<TsT> jme suis dis on va faire simple
+<TsT> tout ce qui est point de vie sera exactement le chiffre que jai dis
+<TsT> 1 class1 (petit) = 1 PV
+<TsT> 1 class4 = 1000PV
+<TsT> et aussi que contrairement a bcp de jeu
+<TsT> construire un class4 mettra autant de temps que construire 1000 class1
+<TsT> y a pas de "cest + gros donc c est plus long a construire"
+<TsT> donc pour linstant mon systeme est equilibré
+<TsT> le seul choix que tu es cest de savoir si tu veux plus ou moins de nombre de vaisseau pour le meme nombre de PV
+<TsT> mais du coup si tout est equivalent
+<TsT> car les points d'attaque pour faire simple cest le mm nombre que les PV
+<TsT> sauf que tel quel ... ca n'a pas trop de sens
+<TsT> donc jme suis dis pour pimenter le truc
+<TsT> et avoir un vrai interet a avoir plusieurs type de vaisseaux
+<TsT> je vais faire en sorte que certaine class aient un avantage sur d'autre
+<TsT> et comme le principe de cercle pour l'univers
+<TsT> jai fais un "chikumi" pierre-papier-ciseau ...
+<TsT> donc une class + grosse a un avantage (pas encore définit) sur la class inferieure
+<TsT> a l'exception de la fin de la boucle
+<TsT> le class1 a un avantage sur le class4
+<TsT> mais ... faut que je retravaille ce point
+<TsT> car si on imagine des vaisseaux spaciaux
+<TsT> qu'un + gros fasse + mal a un plus petit ... ok
+<TsT> mais qu'un tout piti ait un avantage contre une etoile noire on a jamais vu ca ! ah si dans starwar
+
+<TsT> ensuite je me suis poser la question
+<TsT> lors des combats
+<TsT> entre les meme class
+<TsT> cad a vaisseaux identique
+<TsT> quel doit etre l'issue ?
+<TsT> tout le monde des 2 cotés sont mort ?
+<TsT> tout le monde survie ?
+<TsT> la moitier de chaque coté meurt a chaque tour ?
+<TsT> en gros est-ce qu'un vaisseau est sensé etre plutot "tank" donc mieux encaisser que taper
+<TsT> dans ce cas la ils se font rien mutuellement
+<TsT> ou plutot DPS
+<TsT> et du coup s'entre tue
+<TsT> et pire que ca
+<TsT> comment arriver a trouver un systeme pour que ca se passe comme ca avec le calcul des combats
+<TsT> sans entrer dans des calculs de fou
+<TsT> et jai un debut d'idee
+<TsT> suffit de repartir entre 0 et 100%
+<TsT> avec genre 1000 PV => 1000 DEF et 0 Attack
+<TsT> ou 0 DEF et 1000 Attack
+<TsT> ou 500 DEF et 500 Attack
+<TsT> y a juste un coefficient a gerer
+<TsT> mais pour les vaisseaux a 1PV
+<TsT> ca fait de 0.5 0.5 .... bof cest chiant
+<TsT> donc jme suis dis on va faire
+<TsT> point de def = point d'attack
+<TsT> point de def = point d'attack = point de vie
+<TsT> du coup
+<TsT> entre vaisseau identique par defaut = y se passe rien
+<TsT> et en fait jme dis que si je zappe les combats entre vaisseaux identique
+<TsT> et que je me concentre sur les combats entre vaisseaux N et N-1
+<TsT> la ou il y a un avantage
+<TsT> et que des vaisseaux trop ecarté genre
+<TsT> class1 VS class3 = ca peux pas se combattre
+<TsT> en gros jai plus qu'a gerer uniquement les combat entre 4:3 3:2 3:1 et 1:4
+<TsT> comme je voudrais que mon jeu ait des regles tres simple
+<TsT> et que les calculs soient simple pour pouvoir etre fait ou estimé de tete
+<TsT> et facon a pousser la strategie du jeu au meme challenge qu'un jeu d'echec
+<TsT> a savoir quoi faire croire a ton adversaire ... quoi sacrifier ... etc.
+<TsT> donc jme dis
+<TsT> si on a deja plus que des combat comme dit
+<TsT> ca simplifie la prise de tete humaine
+<TsT> ensuite jai pensé sur mes jolies petites perles... euh planetes
+<TsT> je pourrait calculer aleatoire en debut de partie
+<TsT> des coefficients, un coef. d'environnement par planete
+<TsT> qui favoriserait une des class
+<TsT> par exemple un bonus de construction ... pour construire + vite cette type de class
+<TsT> ou bien un bonus d'attaque, pour avoir un interet a faire les combats la ou ca t'avantage
+<TsT> avec un coef qui dit aussi que si une classN est avantagée
+<TsT> la classN+1 et N-1 reste normale
+<TsT> mais la class opposée
+<TsT> est défavorisée
+<TsT> du coup sur chaque planete il y a 2 class qui sont normale 1 en bonus et 1 en malus
+<TsT> donc je commence a voir l'interet du jeu se dessiner
+<TsT> il faut arriver a avoir + de proportion de vaisseaux du type qui a un avantage sur le type que l'ennemis a le +
+<TsT> et pour ca il faut choper les planetes qui permettent d'en constuire + vite
+<TsT> et l'empecher lui de prendre les planetes qui permettent de faire les vaisseaux qui nous sont défavorable
+<TsT> je sais pas encore comment le jeu peux finir
+<TsT> parce que pour les echecs ... cest quand le roi est mate
+<TsT> la je vois 2 scenarios
+<TsT> 1) une des 2 joueurs arrivent a tuer tous les vaisseaux de l'autre
+<TsT> 2) les 2 arrivent a un equilibre de force
+<TsT> ah ...
+<> Z'aime pas le 2ème
+<TsT> mais je peux ptet mettre une limite de temps
+<TsT> du coup ca met de la pression strategique en +
+<TsT> si y a un temps limité (en nombre de tour total)
+<TsT> et pour comparer les 2 joueurs a tout moment
+<TsT> suffit de calculer la somme de leur PV
+<TsT> ca me semble bien
+<TsT> car du coup
+<> c'est pa smal oui ça donne plus a réfléchir
+<TsT> y a pas bien faire ou mal faire mais il y a faire pour arriver a un objetif a temps
+<TsT> ah ui jsais pas si je l'ai dis mais je voudrais
+<TsT> tres tres fortement pousser le jeu vers le partage des parties
+<TsT> et la rejouabilité des parties
+<TsT> cad comme pour les echecs, que chaque mouvement (tour) soit noté
+<TsT> et donc que n'importe quel joueur puisse reprendre la partie de qlq 1 d'autre
+<TsT> et tenter de jouer differement a partir d'un tour qu'il choisi
+<TsT> comme avoir une sauvegarde de la partie a chaque tour
+<TsT> et pouvoir joueur contre une IA :)
+<TsT> vu que pour le coup
+<TsT> elle pas forcement besoin d'etre tres intelligente
+<TsT> elle aura juste une programmation avec une certaine logique
+<TsT> et cest au joueur darriver a la contrer
+<TsT> ca me parait sympa
+<TsT> et derniere idee
+<TsT> pour complexifier a mort tout ca
+<TsT> faudra ptet que je limite l'idee d'une maniere ou d'une autre
+<TsT> il y a le cercl'univers
+<TsT> mais je prevois de pouvoir faire des racourcis
+<> Comment ça des raccourcis?
+<TsT> comme stargate ... pouvoir passer instantannément d'une planete a l'autre ...a l'autre bout de l'univers
+<TsT> mais pour ca je prevois que chaque vaisseaux puisse contacter n'importe quel autre
+<TsT> et permettent de faire teleporter/traverser les vaisseaux de class inferieures
+<TsT> du coup les seules class qui peuvent pas utiliser ce truc c est les plus gros
+<TsT> et pour eviter que ca se teleporte dans tous les sens tout le temps
+<TsT> je penses que je pourrais considerer que pour une taille de téléportation (genre un class3 pour teleporter des class2)
+<> ah oki
+<TsT> ca bouffe 1 ressource de la plaente
+<TsT> la mm resource qui permet un boost ...
+<TsT> ou ptet que sur les planetes qui avantage .... d'ailleur
+<TsT> ouai jpeux ptet jouer sur cette idee d'environnement
+<TsT> cest juste un peu bete pour la class1 ...
+<TsT> elle peux rien téléporter
+<TsT> et je sais pas non plus si je limite de facon stricte qu'un class3 ne peux teleporter que des class2
+<TsT> ou si je considere que tout ce qui est d'une taille peux teleporter tout ce qui est plus petit
+<TsT> genre le class4 peux teleporter class3 2 et 1
+<TsT> et comment calculer ce cout au niveau de la resource ...
+<TsT> et est-ce que je fait un lien entre la resource mangé et une capacité (quota) de vaisseaux teleporté ?
+<TsT> a prioris javais pas envie
+<TsT> mais jme dis que ca risque d'etre piege
+<TsT> si on peux deplacer toute une arme gigantesque en 1 tour pour un cout de ressource minime ...
+<TsT> donc faudrait faire payer la resource proportionnelle a ce qu'on teleporte ....
+
+possible representation :
+
+	http://bost.ocks.org/mike/uberdata/
+		a gauche les 4 class, a droite les planetes
+
+	http://mbostock.github.io/d3/talk/20111116/bundle.html
+		les planetes en cercle avec les infos vitales en texte autour (nombre de class1 2 3 4 a moi + class 1 2 3 4 enemis)
+		les traits pour les liens de teleportation etablis
+
+peut-etre un peu d'inspiration la dedans :
+	http://bost.ocks.org/mike/uberdata/
+	http://bost.ocks.org/mike/hive/
+
+

@@ -1,0 +1,62 @@
+
+
+essai de partie dans un univers de 8 planetes
+
+
+
+		class1	class2	class3	class4
+ (01)		+		-			<- Player 1
+ (02)			+		-		<
+ (03)		-		+			<
+ (04)			-		+		<
+ (05)		+		-			<- Player 2
+ (06)			+		-		<
+ (07)		-		+			<
+ (08)			-		+		<
+
+Legende:
+	+ : bonus x2.0
+	- : malus x0.5
+
+Tour	Planete	Player01					Player02
+
+		class1	class2	class3	class4		class1	class2	class3	class4
+1	@01:	1 A	0 B	0 C 	0 D
+1	@05:     					1 A	0 B	0 C	0 D
+
+=		move 1A @01 @08
+=							make A @05
+
+2	@08:	1 A
+2	@05:						3 A
+
+=		make B @08
+=							move 1A @05 @06
+=							move 1A @05 @04
+=							make A @05
+
+
+3	@08:	1 A	[2/10] B
+3	@04:						1 A
+3	@05:						3 A
+3	@06:						1 A
+
+=		...
+=							...
+
+4	@08	1 A	[4/10] B
+
+=		...
+=							...
+
+5	@08	1 A	[6/10] B
+
+=		...
+=							...
+
+6	@08	1 A	[8/10] B
+
+=		...
+=							...
+
+7	@08	1 A	1 B

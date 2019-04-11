@@ -1,0 +1,69 @@
+
+
+    1[#] =  10[%] = 100[:] = 1000[.]
+  class4 = class3 = class2 = class1
+    1x      10x      100x     1000x
+ 1000PV =  100PV      10PV       1PV
+
+
+un cercl'univers : une ligne de point a distance reguliere recourbé sur elle meme.
+
+
+de vaisseaux, de different type/taille
+- approche chifumi ? (un gros a le dessu sur un plus le tit jusqu'au plus petit qui a le dessus sur l'enorme ?)
+- pouvoir (ou pas selon equilibre) construire les mm unités 1# ou 1000. pour une mm durée de construction
+
+arriver a determiner comment calculer les combats/pertes
+une regle simple du pour 1% == 10: on a une supperiorité d'attaque de 1%
+
+combat:
+200. == 1%
+100. vs 1% -> 100. (0PV) detruit et 1% (0.5 PV)
+
+la plus petite unité a 1.00 points de vie ?
+
+1.     1.00PV
+1#  1000.00PV
+
+arriver a avoir une facon de calcul de force de combat de groupe:
+- additionner tous les attaquant ? => non car les differentes class n'ont pas les mm avantage ...
+- faire des groupes d'attaques et calculer sur la moyenne des PV pondérée par les classes ?
+
+1# [1000PV] + 9000. [9000.00PV]
+class4# : 1/10 10%   ; 1x 1000PV = 1000PV
+class1. : 9/10 90%   ; 9000x 1PV = 9000PV
+donc 10% avantage vs class3
+et 90% avantage vs class4
+
+
+class3% : 50% (avantage class2)  ; 5x 100PV = 5000PV
+class2% : 50% (avantage class1)  ; 50x 10PV = 5000PV
+
+simulation combat tous les tirs de tous les vaisseaux partent en mm temps ?
+
+class2 > class1 : 50*1.5 vs 9000 => 750 vs 9000 => 0class2 | 8250 class1
+class3 > class2 : rien
+class4 > class3 : 1*1000PV*1.5 vs 50x10PV = 1500PV vs 5000PV = 0class4 35 class3
+class1 > class4 : rien
+
+P1  0x class4 8250x class1 = 8250PV
+P2 35x class3    0x class2 = 3500PV
+sans compter les attaques entre class plus loin ?
+
+
+
+Q: avantager les hautes class lors des combats ? les petits meurts en premier ? compensé par l'avantage de la vitesse de deplacement ?
+
+difference des class :
+ - vitesse de deplacement ?
+ - mieux adapté selon la cible strategique ? (class4 = mieux pour detruire une planete ?)
+ - class1 mieux pour exploration
+
+
+point d'attaque = coef * PV
+point def = PV
+
+=> ca permet de rendre les combats entre mm class soit ex aequo (tous les 2 détruits) soit inefficace (tous les 2 intactes)
+
+=> chaque planete coef d'environnement
+
