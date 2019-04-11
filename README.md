@@ -31,25 +31,36 @@ Par exemple on imagine le cerveau artificiel d'une unité ... l'une des premiere
 et dans un univers ou on gere des coordonnees 2D il faut calculer les distances tous les objets autour d'un point de départ (les coordonnees de l'unité).
 Ca n'a rien de très difficile mais si on fait ca pour des milliers d'unité évoluant dans un univers vaste... on est vite confronté a des difficultés, qui s'avere etre purement induite par ce choix de coordonnées 2D.
 
-## 3) reduire au minimum
+## 3) Un univers en 3D
 
-Si l'information qu'une intelligence a besoin est donne moi les objets qui sont proche de moi avec leur distance respective...
+Les calculs de distance ou de trajectoire en 3 dimensions est rapidement compliqués.
+Essayons de réduire la difficulté en réduisant le nombre de dimensions
+
+## 4) Un univers en 2D
+
+Il y a hélà toujours encore beaucoup de calculs.
+
+Mettons nous à la place du programme intelligent que nous essayons de programmer.
+L'information dont on a besoin est "la liste des objets qui sont proche de moi avec leur distance respective"
 arrangeons nous pour que l'univers est une forme proche de celle-ci.
 
-Si la 3D est trop compliquée a représenter, réduisons a la 2D.
-Si la 2D est encore un peu trop compliquée réduison a la 1D.
+## 5) Un univers encore plus simple
 
-## 4) un univers en 1D
+Si la 3D est trop compliquée à représenter, réduisons à la 2D.
+Si la 2D est encore un peu trop compliquée, réduisons à la 1D.
+
+## 6) Un univers en 1D
 
 Voila je créé mon univers en 1D une ligne avec des coordonnees entiere (0, 1, 2, ...)
 
-## 5) pour la perfection
+## 7) Un univers sans fin
 
-La perfection est dans le cercle. Aller soyons fou arrangeons nous pour relier la fin de l'univers (a droite) a son commencement (a gauche).
+Aller soyons fou arrangeons nous pour relier la fin de l'univers (à droite) à son commencement (à gauche).
 On obtient un univers en forme de cercle!
-Je le batise cercle univers... le cercl'univers !
 
+La perfection est dans le cercle!
 
+Je le batise "cercle univers" : le cercl'univers !
 
 
 Envie d'originalité
@@ -78,7 +89,7 @@ Envie de jouer avec l'espace (multi dimension) et le temps
 mais ca devient rapidement soit inutilement compliqué, soit ininterressant pour un jeu, soit effrayant pour la majorité des gens ...
 
 
-Evenement : Edge of tomorrow
+Evenement : [Edge of tomorrow](https://fr.wikipedia.org/wiki/Edge_of_Tomorrow)
 
 le principe "die and retry" m'a reveillé l'envie de faire un jeu ou on puisse partager et forker nimporte quel moment du jeu et pouvoir comparer tous ces forks ...
 
