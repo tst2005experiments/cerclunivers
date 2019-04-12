@@ -224,6 +224,7 @@ Si on pense au jeu d'échec, humain contre machine on peut imaginer perdre une p
 Une approche ou le joueur joue contre une IA. Le but est de comprendre comment elle fonctionne et trouver ses failles.
 Un peu comme un "combat de boss" où l'on découvre ses "patterns d'attaques" pour ensuite les éviter.
 
+! une partie symétrique
 
 ## Gameplay: scenario resolution de problème
 
@@ -236,6 +237,7 @@ L'intérêt étant d'y arriver mais aussi de pouvoir comparer avec ses amis la m
 
 On peut aussi remplacer l'humain par un humain qui programme son IA et faire jouer cette IA.
 
+! une partie asymétrique
 
 
 !	Le principe "die and retry" m'a reveillé l'envie de faire un jeu ou on puisse partager et forker n'importe quel moment du jeu et pouvoir comparer tous ces forks ...
