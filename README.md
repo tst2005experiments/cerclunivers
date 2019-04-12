@@ -119,19 +119,39 @@ On ne peut pas joindre directement un point qui ne soit pas à coté de notre po
 
 Exemple: en partant de "2" peut joindre directement "1" ou "3" mais pas "4".
 
-Sur chaque point on peut sans trop de mal imaginer stoquer un certain nombre d'informations.
+Pour l'instant on ne sait gérer que des déplacements.
 
+# Un univers riche
+
+Il faut rendre cet univers avec plus d'informations.
+Sur chaque point on peut sans trop de mal imaginer stoquer un certain nombre d'informations.
+Ce qui devrait permettre d'indiquer des différences entre ces points.
+
+## Des ressources
+
+Un de ces différence pourrait être des ressources.
+(Cf. Starcraft)
+
+On peut aussi différencier des points qui seraient :
+* des planètes ayant des ressources, 
+* du vide spacial qui ne sert qu'a indiquer une distance entre 2 planètes
+
+Le déplacement devient un moyen de réaliser un objectif.
 
 ## Des déplacements alternatifs
 
-On peut facilement envisager d'ajouter sur un point une information additionnelle qui indique un lien vers un autre point. Un chemin alternatif.
+Un des différences pourrait être la présence d'un élément (fixe) permettant une action spéciale.
+Imaginons un lien vers un autre point : un chemin alternatif, un racourcis!
 
-On obtient des moyens de déplacement conventionnel par le chemin en cercle (très simple à gérer, très simple à calculer).
-Et des chemins alternatif, comme des racourcis (simple à gérer, relativement simple à calculer).
+On obtient 2 type de déplacement :
+* le déplacement conventionnel : par le chemin en cercle (très simple à gérer, très simple à calculer).
+* le déplacement alternatif : par ce racourcis (simple à gérer, relativement simple à calculer).
 
-Au final on vient de transformer un réseau en cercle en d'un réseau maillé.
+Au final on vient de transformer un [réseau en cercle](https://fr.wikipedia.org/wiki/Topologie_de_r%C3%A9seau#Le_r%C3%A9seau_en_anneau)
+en d'un [réseau maillé](https://fr.wikipedia.org/wiki/Topologie_mesh)([2](https://fr.wikipedia.org/wiki/Topologie_de_r%C3%A9seau#Le_r%C3%A9seau_maill%C3%A9)).
+
 La compléxité est au rendez-vous mais la gestion des données reste très basique.
-La compléxité ajoutée se fera sentir lors des calculs de distance.
+La compléxité ajoutée se fera sentir lors des calculs de distance, tout en me semblant abordable.
 
 
 # Le défi personnel
@@ -170,13 +190,13 @@ Le principe de "mourir et recommencer" m'a fait penser à intégrer la rejouabil
 Si on pense au jeu d'échec, humain contre machine on peut imaginer perdre une partie en rejouer une et connaitre le comportement de l'adversaire IA.
 
 
-## Gameplay humain VS machine
+## Gameplay: humain VS machine
 
 Une approche ou le joueur joue contre une IA. Le but est de comprendre comment elle fonctionne et trouver ses failles.
 Un peu comme un "combat de boss" où l'on découvre ses "patterns d'attaques" pour ensuite les éviter.
 
 
-## Gameplay scenario resolution de problème
+## Gameplay: scenario resolution de problème
 
 C'est une approche humain contre machine ou machine contre machine.
 
