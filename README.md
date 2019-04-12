@@ -153,24 +153,53 @@ en d'un [réseau maillé](https://fr.wikipedia.org/wiki/Topologie_mesh)([2](http
 La compléxité est au rendez-vous mais la gestion des données reste très basique.
 La compléxité ajoutée se fera sentir lors des calculs de distance, tout en me semblant abordable.
 
+## Des unités a déplacer
+
+Nous avons donc notre "échiquier" : le cercle univers.
+Nous n'avons pas parlé des "pièces de jeu" : des unités, des éléments a déplacer de point en point.
+
+Ces unités aussi pourraient facilement avoir des informations propres :
+* sur l'endroit ou elle se trouve (sur quel point)
+* sur leur état de santé (point de vie) jusqu'à leur destruction.
+* d'autres informations selon les besoins de notre jeu
+* pour notre IA, des directives pour piloter son comportement
+* etc.
+
 
 # Le défi personnel
 
-Au delà de l'Intelligence Artificielle qui est un défit à part entière.
-J'ai envie de créer un jeu qui utilise des mécaniques qui sont habituellement éludé/évité.
+Au delà de l'Intelligence Artificielle qui est un défit à part entière,
+j'ai envie de jouer avec l'espace et le temps.
+
+J'ai envie de créer un jeu qui utilise ces mécaniques qui sont habituellement éludé/évité.
 
 * Imaginez un jeu où l'on voyagerait en hyper espace !
 * Imaginez un jeu où l'on traverserait un trou de verre et où on évoluerait dans un univers parallèle !
 * Imaginez un jeu ou l'on voyagerait dans le temps !
 
-Vous l'avez compris je n'ai peur de rien !
+Vous l'avez compris, je n'ai peur de rien !
 
-!	Mais j'avoue avoir du mal a trouver un gameplay adapté et interressant.
-!	J'ai envie de jouer avec l'espace (multi dimension) et le temps
-!	mais ca devient rapidement soit inutilement compliqué, soit ininterressant pour un jeu, soit effrayant pour la majorité des gens ...
+Malheuseument ces mécaniques peuvent devenir effrayantes, inutilement compliquées ou ininterressantes pour un jeu.
+Peut-être tout simplement un autre défit à ajouter à ma liste.
+
+# Une base technique
+
+La première partie est une base technique vouée a être utilisé par d'autres personnes pour développer leur propre jeu.
+
+Elle se veut relativement générique et abstraite.
+Je n'ai parlé pour l'instant que de cercle, de point, d'unité et de donnée associée.
+
+## un ajout spécifique
+
+La seconde partie est mon jeu à moi que j'ai choisi de produire comportant mes choix de gameplay.
+Elle utilise la première partie.
+
+J'insiterais mes amis a créér leur prore jeu ou variante.
+
+# Mon jeu
 
 
-# Un jeu spacial
+## Un jeu spacial
 
 Il fallait trouver un thème de jeu.
 J'ai voulu faire un jeu avec "des planètes et des vaisseaux dans l'espace", un "Space Opera".
