@@ -1,4 +1,45 @@
 
+   * [Les prémices du projet](#les-prémices-du-projet)
+      * [1) Envie de jouer avec de l'Intelligence Artificielle](#1-envie-de-jouer-avec-de-lintelligence-artificielle)
+         * [une idée en passant](#une-idée-en-passant)
+         * [l'idée qui reste](#lidée-qui-reste)
+      * [2) Contrainte: de simplicité technique](#2-contrainte-de-simplicité-technique)
+      * [3) Un univers en 3D](#3-un-univers-en-3d)
+      * [4) Un univers en 2D](#4-un-univers-en-2d)
+      * [5) Un univers encore plus simple](#5-un-univers-encore-plus-simple)
+      * [6) Un univers en 1D](#6-un-univers-en-1d)
+      * [7) Un univers sans fin](#7-un-univers-sans-fin)
+   * [Un univers trop simple](#un-univers-trop-simple)
+   * [Un univers moins simple](#un-univers-moins-simple)
+   * [Un univers riche](#un-univers-riche)
+      * [Des ressources](#des-ressources)
+      * [Des déplacements alternatifs](#des-déplacements-alternatifs)
+      * [Des unités a déplacer](#des-unités-a-déplacer)
+   * [Le défi personnel](#le-défi-personnel)
+   * [Une base technique](#une-base-technique)
+      * [un ajout spécifique](#un-ajout-spécifique)
+   * [Mon jeu](#mon-jeu)
+      * [Un jeu spacial](#un-jeu-spacial)
+      * [Jouer avec le temps](#jouer-avec-le-temps)
+   * [Les différents gameplay](#les-différents-gameplay)
+      * [Equilibre initial](#equilibre-initial)
+         * [Symétrique](#symétrique)
+         * [Asymétrique](#asymétrique)
+      * [Gameplay: humain VS humain](#gameplay-humain-vs-humain)
+      * [Gameplay: humain VS machine](#gameplay-humain-vs-machine)
+      * [Gameplay asymétrique: résolution de problème](#gameplay-asymétrique-résolution-de-problème)
+   * [Faire un bon jeu](#faire-un-bon-jeu)
+      * [choix/strategie](#choixstrategie)
+      * [progression](#progression)
+      * [compréhension/prise en main](#compréhensionprise-en-main)
+      * [rejouabilité, évolution](#rejouabilité-évolution)
+   * [STOP la suite est en chantier](#stop-la-suite-est-en-chantier)
+      * [Les déplacements](#les-déplacements)
+      * [L'hyper-vitesse](#lhyper-vitesse)
+      * [La problématique de l'hyper-vitesse](#la-problématique-de-lhyper-vitesse)
+   * [Envie d'originalité](#envie-doriginalité)
+
+
 # Les prémices du projet
 
 En 2014 ...
@@ -120,7 +161,7 @@ Un de ces différence pourrait être des ressources.
 (Cf. Starcraft)
 
 On peut aussi différencier des points qui seraient :
-* des planètes ayant des ressources, 
+* des planètes ayant des ressources,
 * du vide spacial qui ne sert qu'a indiquer une distance entre 2 planètes
 
 Le déplacement devient un moyen de réaliser un objectif.
@@ -205,29 +246,94 @@ Le principe de "mourir et recommencer" m'a fait penser à intégrer la rejouabil
 
 Si on pense au jeu d'échec, humain contre machine on peut imaginer perdre une partie en rejouer une et connaitre le comportement de l'adversaire IA.
 
+# Les différents gameplay
+
+Je penses a différent gameplay adapté a différent type de joueurs.
+Nous avons
+- "humain" : les joueurs humains
+- "humain-dev" : les programmes (IA) fait par des joueurs humain
+- "machine" : les programmes (IA) fait par l'auteur du jeu
+
+Si on reprend la comparaison avec le jeu d'échec, en considérant que le jeu n'est pour l'instant qu'un affrontement de 2 joueurs.
+On peut avoir toutes les combinaisons. Certaines seront sans doute plus interessantes que d'autres.
+
+Si on considère que l'humain et humain-dev sont équivalent on obtient :
+- humain contre humain (les joueurs s'affrontent entre eux)
+- humain contre machine (le joueur se mesure au jeu (et à l'auteur du jeu en quelque sorte))
+- machine contre machine (uniquement interessant pour l'auteur du jeu)
+
+On peut sans doute imaginer des parties ayant plus de 2 joueurs.
+Ca se complique un peu mais hormis des groupes/alliances ca ne changent pas grand chose.
+
+## Equilibre initial
+
+### Symétrique
+
+Il semble plus équitable que les joueurs commencent avec les même chances.
+On constate un très grande symétrie dans le placement initial des pièces d'échec.
+
+### Asymétrique
+
+On peut aussi considérer un commencement totalement différent, cela peut-être un défit à relever.
+
+
+## Gameplay: humain VS humain
+
+Nous mettons en place une terrain de jeu et ce sont des humains qui s'affrontent.
+Mais dans ce cas là on ne remplie pas notre objectif initial de "jouer avec de l'IA".
+
 
 ## Gameplay: humain VS machine
 
-Une approche ou le joueur joue contre une IA. Le but est de comprendre comment elle fonctionne et trouver ses failles.
-Un peu comme un "combat de boss" où l'on découvre ses "patterns d'attaques" pour ensuite les éviter.
+Une approche ou le joueur joue contre une IA (pilotée par le jeu).
+Le but est de comprendre comment elle fonctionne et trouver ses failles.
+Un peu comme un "combat de boss" où l'on découvre ses "patterns" d'attaques pour ensuite les éviter ou en profiter.
 
-!IGNORE: une partie symétrique
 
-## Gameplay: scenario resolution de problème
+## Gameplay asymétrique: résolution de problème
 
-C'est une approche humain contre machine ou machine contre machine.
-
-Ca conciste a créé une partie dans un état déjà avancé.
+Ca conciste a créé une partie dans un état déjà avancé, sans doute non équilibrée.
 Où le but est de réussir un objectif.
+
+On peut avoir un début de partie asymétrique, où le joueur humain est en infériorité numérique.
+Il devra user de stratégie et d'intelligence pour reprendre le dessus.
 
 L'intérêt étant d'y arriver mais aussi de pouvoir comparer avec ses amis la manière d'y arriver.
 
 On peut aussi remplacer l'humain par un humain qui programme son IA et faire jouer cette IA.
 
-!IGNORE: une partie asymétrique
 
 
 !IGNORE:	Le principe "die and retry" m'a reveillé l'envie de faire un jeu ou on puisse partager et forker n'importe quel moment du jeu et pouvoir comparer tous ces forks ...
+
+
+# Faire un bon jeu
+
+Je penses que l'on peut dégager certains ingrédients qui font la réussite de nombres de jeux vidéo.
+
+Les critères qui me paraissent important pour le type de jeu que j'essai de faire sont :
+
+## choix/strategie
+
+Comme aux échecs, les choix qu'on prend sont au coeur du jeu.
+
+## progression
+
+Je penses a la progression personnelle.
+Lorsqu'on a des objectifs, une notion de progression, on peut se juger et être content d'avoir atteind le niveau que l'on a.
+mais aussi savoir vers où l'on va, parfois s'acharner pour l'atteindre.
+Il faut tout de même veiller a ne pas dégouter le joueur!
+
+Je penses aussi la progression individuelle/compétitive, la notion de classement par rapport aux autres.
+Très présente dans les jeux compétitifs.
+
+## compréhension/prise en main
+
+Il est très important que l'interface et l'ensemble des actions possibles soient compréhensibles et accessibles.
+
+## rejouabilité, évolution
+
+?
 
 
 
@@ -305,10 +411,4 @@ Faire un jeu avec
 * des plans d'existance multiples
 * du voyage dans le temps
 
-# Des clés de réussite
-
-- choix
-- progression
-- compréhension/prise en main
-- rejouabilité, évolution
 
