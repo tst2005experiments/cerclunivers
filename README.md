@@ -1,45 +1,4 @@
 
-   * [Les prémices du projet](#les-prémices-du-projet)
-      * [1) Envie de jouer avec de l'Intelligence Artificielle](#1-envie-de-jouer-avec-de-lintelligence-artificielle)
-         * [une idée en passant](#une-idée-en-passant)
-         * [l'idée qui reste](#lidée-qui-reste)
-      * [2) Contrainte: de simplicité technique](#2-contrainte-de-simplicité-technique)
-      * [3) Un univers en 3D](#3-un-univers-en-3d)
-      * [4) Un univers en 2D](#4-un-univers-en-2d)
-      * [5) Un univers encore plus simple](#5-un-univers-encore-plus-simple)
-      * [6) Un univers en 1D](#6-un-univers-en-1d)
-      * [7) Un univers sans fin](#7-un-univers-sans-fin)
-   * [Un univers trop simple](#un-univers-trop-simple)
-   * [Un univers moins simple](#un-univers-moins-simple)
-   * [Un univers riche](#un-univers-riche)
-      * [Des ressources](#des-ressources)
-      * [Des déplacements alternatifs](#des-déplacements-alternatifs)
-      * [Des unités a déplacer](#des-unités-a-déplacer)
-   * [Le défi personnel](#le-défi-personnel)
-   * [Une base technique](#une-base-technique)
-      * [un ajout spécifique](#un-ajout-spécifique)
-   * [Mon jeu](#mon-jeu)
-      * [Un jeu spacial](#un-jeu-spacial)
-      * [Jouer avec le temps](#jouer-avec-le-temps)
-   * [Les différents gameplay](#les-différents-gameplay)
-      * [Equilibre initial](#equilibre-initial)
-         * [Symétrique](#symétrique)
-         * [Asymétrique](#asymétrique)
-      * [Gameplay: humain VS humain](#gameplay-humain-vs-humain)
-      * [Gameplay: humain VS machine](#gameplay-humain-vs-machine)
-      * [Gameplay asymétrique: résolution de problème](#gameplay-asymétrique-résolution-de-problème)
-   * [Faire un bon jeu](#faire-un-bon-jeu)
-      * [choix/strategie](#choixstrategie)
-      * [progression](#progression)
-      * [compréhension/prise en main](#compréhensionprise-en-main)
-      * [rejouabilité, évolution](#rejouabilité-évolution)
-   * [STOP la suite est en chantier](#stop-la-suite-est-en-chantier)
-      * [Les déplacements](#les-déplacements)
-      * [L'hyper-vitesse](#lhyper-vitesse)
-      * [La problématique de l'hyper-vitesse](#la-problématique-de-lhyper-vitesse)
-   * [Envie d'originalité](#envie-doriginalité)
-
-
 # Les prémices du projet
 
 En 2014 ...
@@ -227,7 +186,7 @@ J'insiterais mes amis a créér leur prore jeu ou variante.
 # Mon jeu
 
 
-## Un jeu spacial
+## Jouer avec l'espace
 
 Il fallait trouver un thème de jeu.
 J'ai voulu faire un jeu avec "des planètes et des vaisseaux dans l'espace", un "Space Opera".
