@@ -358,8 +358,7 @@ casual ?
 hardcore gamer ?
 
 
-Envie d'originalité
-===================
+# Envie d'originalité
 
 A certain moment de ma vie j'ai essayé d'imaginer des jeux tres originaux...
 Ainsi qu'un besoin de relever un challenge de la "compléxité finalement abordable à tous".

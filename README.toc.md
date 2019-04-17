@@ -41,4 +41,3 @@ Table of Contents
       * [L'hyper-vitesse](README.md#lhyper-vitesse)
       * [La problématique de l'hyper-vitesse](README.md#la-problématique-de-lhyper-vitesse)
    * [Envie d'originalité](README.md#envie-doriginalité)
-
